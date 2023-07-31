@@ -55,6 +55,7 @@ public class TransactionServiceImpl implements TransactionService {
             transactionProductEntityList.add(transactionProductEntity);
         }
         transactionEntity.setTransactionProductEntityList(transactionProductEntityList);
+        transactionRepository.save(transactionEntity);
 
         return new TransactionDetailData(transactionEntity);
     }
